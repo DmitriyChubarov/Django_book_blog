@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(31, 31, 31);
+}
+
+.top_text {
+    color: white;
+}
+
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+.a:hover {
+    font-size: 105%; 
+}
+
+
+.for_post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(95, 95, 95);
+    color: white;
+    margin-top: 30px;
+    padding: 35px;
+    padding-top: 10px;
+    width: 500px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
