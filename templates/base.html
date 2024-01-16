@@ -1,10 +1,13 @@
 {% load static %}
 <head>
     <link rel="stylesheet" href=" {% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post_new.css' %}">
 </head>
 <body>
     <div class="top_text">
-        <h1><a href="{% url 'home' %}" class="a">Новостная лента</a></h1>    
+        <h3 class="pass">Добавить новый пост</h3>
+        <h1><a href="{% url 'home' %}" class="top_text_news">Новостная лента</a></h1>    
+        <h3><a href="{% url 'post_new' %}" class="top_text_new">Добавить новый пост</a></h3>    
     </div>
 
     <div>

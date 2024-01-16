@@ -1,0 +1,13 @@
+.form form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h1 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
