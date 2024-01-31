@@ -11,14 +11,6 @@ a {
     text-decoration: none;
 }
 
-.top_text .top_text_new:hover {
-    background-color: rgb(95, 95, 95);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-
-
 .for_post{
     display: flex;
     flex-direction: column;
@@ -28,6 +20,7 @@ a {
     margin-top: 30px;
     padding: 35px;
     padding-top: 10px;
+    padding-bottom: 0px;
     width: 500px;
     border-radius: 20px;
     text-align: center;
@@ -52,4 +45,25 @@ a {
 
 .top_text_new {
     padding-right: 10px;
+}
+
+.edit-delete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    height: 30px;
+    align-items: center;
+}
+
+.edit-delete p:hover {
+    transform: scale(1.1);
+}
+
+.top_text h3:hover {
+    transform: scale(1.1);
+}
+
+.for_post h3:hover {
+    transform: scale(1.1);
 }

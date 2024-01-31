@@ -3,13 +3,14 @@ from django.urls import reverse
 
 class Post(models.Model):
     
-    title = models.CharField(max_length=200, label="Заголовок")
+    title = models.CharField(max_length=200, verbose_name="Заголовок")
 
-    body = models.TextField()
+    body = models.TextField(verbose_name="Основной текст")
 
     author = models.ForeignKey(
         'auth.user',
-        on_delete = models.CASCADE
+        on_delete = models.CASCADE,
+        verbose_name="Автор"
     )
 
     def __str__(self):

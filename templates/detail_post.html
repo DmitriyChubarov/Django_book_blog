@@ -4,8 +4,12 @@
 
 <div class="posts">
         <div class="for_post">
-            <h3>{{ post.title }}</h3>
+            <h2>{{ post.title }}</h3>
             <p>{{ post.body }}</p>
+                <div class="edit-delete">
+                    <p><a href="{% url 'edit_post' post.pk %}" >Редактировать пост</a></p>
+                    <p><a href="{% url 'delete_post' post.pk %}" >Удалить пост</a></p> 
+                </div>
         </div>
 </div>
 
