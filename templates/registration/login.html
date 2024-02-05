@@ -1,0 +1,16 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href=" {% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post_new.css' %}">
+</head>
+
+<body>
+<div class="form">
+    <form method="post"> 
+        {% csrf_token %}
+        <h1>Заполните все поля</h1>
+        {{ form.as_p }}
+    <button type="submit">Войти</button> 
+    </form>
+</div>
+</body>

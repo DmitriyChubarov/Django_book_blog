@@ -17,7 +17,7 @@ a {
     align-items: center;
     background-color: rgb(95, 95, 95);
     color: white;
-    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 35px;
     padding-top: 10px;
     padding-bottom: 0px;
@@ -39,12 +39,18 @@ a {
     border-bottom: 1px solid white;
 }
 
-.pass {
-    color: rgb(31, 31, 31);
+.top_text-3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.top_text_new {
-    padding-right: 10px;
+.top_text h3:hover {
+    transform: scale(1.05);
+}
+
+.pass {
+    color: rgb(31, 31, 31);
 }
 
 .edit-delete {
@@ -60,10 +66,21 @@ a {
     transform: scale(1.1);
 }
 
-.top_text h3:hover {
+.for_post h3:hover {
     transform: scale(1.1);
 }
 
-.for_post h3:hover {
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hello h3 {
+    color: rgb(31, 31, 31);
+}
+
+.hello h3:hover {
     transform: scale(1.1);
 }

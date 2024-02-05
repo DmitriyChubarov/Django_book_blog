@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, TemplateView
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 
@@ -28,4 +28,6 @@ class BlogDeleteView(DeleteView):
     success_url = reverse_lazy('home')
     template_name = 'delete_post.html'
 
+class BlogLogoutView(TemplateView):
+    template_name = 'registration/logout.html'
 

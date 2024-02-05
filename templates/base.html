@@ -3,15 +3,30 @@
     <link rel="stylesheet" href=" {% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/post_new.css' %}">
 </head>
-<body>
-    <div class="top_text">
-        <h3 class="pass">Добавить новый пост</h3>
-        <h1><a href="{% url 'home' %}" class="top_text_news">Новостная лента</a></h1>    
-        <h3><a href="{% url 'post_new' %}" class="top_text_new">Добавить новый пост</a></h3>    
-    </div>
 
+
+<body>
+    {% if user.is_authenticated %}
+        <div class="top_text">
+            <h3 class="top_text-1"><a href="{% url 'post_new' %}" class="top_text_new">Добавить новый пост</a></h3>
+            <h1 class="top_text-3"><a href="{% url 'home' %}" class="top_text_news">Новостная лента</a></h1>    
+            <h3 class="top_text-2"><a href="{% url 'logout_' %}" class="top_text_new">Выйти</a></h3>   
+        </div>
+        <div class="hello">
+            <h2>Добро пожаловать, {{ user.username }}.</h2>
+        </div>
+    {% else %}
+        <div class="top_text">
+            <h3 class="top_text-1"><a href="{% url 'login' %}">Войти</a></h3>
+            <h1 class="top_text-3"><a href="{% url 'home' %}" class="top_text_news">Новостная лента</a></h1>    
+            <h3 class="top_text-2"><a href="{% url 'signup' %}">Регистрация</a></h3>   
+        </div>
+        <div class="hello">
+            <p>Вы не вошли в аккаунт.</p>
+        </div>
+    {% endif %} 
     <div>
         {% block content %}
         {% endblock content %}
     </div>
-</body> 
+</body>
